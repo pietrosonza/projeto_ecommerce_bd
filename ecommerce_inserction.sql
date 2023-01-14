@@ -3,7 +3,7 @@
 -- Inserindo dados clientPF
 insert into clientePF (idCliente, pNome, mNome, fNome, cpf, nascimento, sexo, dataCadastro)
 	values
-    (1, 'Pietro', 'P', 'Sonza', '04178545019', '1998-08-17', 'M', '2023-01-08'),
+    (1, 'Pietro', 'P', 'Sonza', '15487484714', '1998-08-17', 'M', '2023-01-08'),
     (2, 'Sandro', 'P', 'Sonza', '12345678910', '1996-07-06', 'M', '2023-01-08'),
     (3, 'Merieli', 'M', 'Padilha', '12345678911', '1997-05-08', 'F', '2023-01-01'),
     (4, 'Sandro', 'A', 'Sonza', '12345678912', '1995-09-23', 'M', '2022-12-18'),
