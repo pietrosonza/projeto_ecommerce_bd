@@ -77,8 +77,7 @@ insert into entrega (idPedido, statusEntrega)
     (3, null),
     (4, null),
     (5, null);
-    
-drop table estoque;
+  
 -- Inserindo dados estoque
 insert into estoque (endereco)
 	values
