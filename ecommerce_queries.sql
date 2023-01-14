@@ -1,6 +1,3 @@
-use ecommerce;
-show tables;
-
 -- número de vendas no período
 select count(*) from pedido;
 	-- 5
@@ -12,30 +9,30 @@ select sum(quantidade) quantidade_vendida from produtopedido;
 -- Busque os itens, a quantidade e o valor total por item
 select p.pNome produto, sum(pp.quantidade) quantidade, sum(p.valor * pp.quantidade) valor from produtopedido pp
 	inner join produto p
-    on p.idProduto = pp.idProduto
-    group by p.pNome;
+    	on p.idProduto = pp.idProduto
+   	group by p.pNome;
 	-- computador = 1 valor 8500, cama box = 8 valor 32000, Tenis casual = 5 valor 2275
 
 -- Total da receita até o momento
 select sum(pp.quantidade * p.valor) total_receita from produtopedido pp
 	inner join produto p
-    on p.idProduto = pp.idProduto;
+    	on p.idProduto = pp.idProduto;
     -- R$42.775
 
 -- Quais produtos e suas quantidades estão armazenado em cada cidade
 select e.endereco, p.pNome, pe.quantidadeEstoque from produtoestoque pe
 	inner join estoque e
 	on pe.idEstoque = e.idEstoque
-    inner join produto p
-    on pe.idProduto = p.idProduto
-    order by quantidadeEstoque desc;
+    	inner join produto p
+    	on pe.idProduto = p.idProduto
+    	order by quantidadeEstoque desc;
 
 -- Quantidade total de cada produto em estoque
 select p.pNome produto, sum(pe.quantidadeEstoque) quantidade from produtoestoque pe
 	inner join produto p
-    on pe.idProduto = p.idProduto
-    group by p.pNome
-    order by quantidade desc;
+    	on pe.idProduto = p.idProduto
+    	group by p.pNome
+    	order by quantidade desc;
     
 -- Nossa lista de clientes contêm mais PJ ou PF?
 
