@@ -1,8 +1,4 @@
 -- Persistência dos dados
-show global variables like 'foreign_key_checks';
-set global foreign_key_checks=1;
-show variables like 'foreign_key_checks';
-set foreign_key_checks=1;
 
 -- Inserindo dados clientPF
 insert into clientePF (idCliente, pNome, mNome, fNome, cpf, nascimento, sexo, dataCadastro)
